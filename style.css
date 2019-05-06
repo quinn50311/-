@@ -1,0 +1,28 @@
+body
+{
+	font-family:Times New Roman, Microsoft JhengHei;
+	background-image : url(backpic.jpg);
+	background-position: top left;
+	background-attachment: fixed;
+	background-color: LightGrey;
+	background-size: cover; 
+}
+
+td
+{
+	border: 1px solid black;
+	font-family:標楷體;
+	font-size:18px;
+	letter-spacing:3px;
+}
+
+p
+{
+	font-family:標楷體;
+	font-size:18px;
+}
+
+/* input1
+{
+	text-align: center; 
+} */

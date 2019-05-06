@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>訂 票 系 統</TITLE>
+
+<script type="text/javascript" src="script.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</HEAD>
+
+<BODY style="background-image:url(http://www.ypppt.com/uploads/allimg/180120/1-1P120152Z60-L.jpg);background-repeat:no-repeat;">
+
+<h1 style="text-align:center;color:black">火車訂票網站</h1>
+<h2 style="text-align:center;color:black">起始站</h2>
+<form align="center" name="myForm">
+<select style="width:150px;" name="region" onChange="renew(this.selectedIndex);">
+  <option value=""></option>
+  <option value="00">台北</option>
+  <option value="01">桃園</option>
+  <option value="02">新竹</option>
+  <option value="03">苗栗</option>
+  <option value="04">台中</option>
+  <option value="05">彰化</option>
+  <option value="06">南投</option>
+  <option value="07">雲林</option>
+  <option value="08">嘉義</option>
+  <option value="09">台南</option>
+  <option value="10">高雄</option>
+  <option value="11">屏東</option>
+  <option value="12">台東</option>
+  <option value="13">花蓮</option>
+  <option value="14">宜蘭</option>
+</select>
+ <select style="width:150px;" name="station">
+  <option value="">請先選擇地區
+  </select>
+</form>
+<h2 style="text-align:center;color:black">到達站</h2>
+<form align="center" name="myForm1" id="myForm">
+<select style="width:150px;" name="region1" onChange="renew1(this.selectedIndex);">
+  <option value=""></option>
+  <option value="00">台北</option>
+  <option value="01">桃園</option>
+  <option value="02">新竹</option>
+  <option value="03">苗栗</option>
+  <option value="04">台中</option>
+  <option value="05">彰化</option>
+  <option value="06">南投</option>
+  <option value="07">雲林</option>
+  <option value="08">嘉義</option>
+  <option value="09">台南</option>
+  <option value="10">高雄</option>
+  <option value="11">屏東</option>
+  <option value="12">台東</option>
+  <option value="13">花蓮</option>
+  <option value="14">宜蘭</option>
+</select>
+ <select style="width:150px;" name="station1">
+  <option value="">請先選擇地區
+  </select>
+</form>
+
+<h2 style="text-align:center;color:black">日期</h2>
+<center><input align="center" type="date" name="bday" id="date"></center>
+
+<center><input type ="button" onclick="query();" value="確定"></input></center>
+
+<p id="demo"></p>
+
+</BODY>
+</HTML>

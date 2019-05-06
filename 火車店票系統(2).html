@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>付款方式</TITLE>
+<script type="text/javascript" src="script.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</HEAD>
+
+<BODY style="background-image:url(http://www.ypppt.com/uploads/allimg/180120/1-1P120152Z60-L.jpg);background-repeat:no-repeat;">
+<h1 style="text-align:center;color:black">您所訂的車票</h1>
+<p id="d"></p>
+<h1 style="text-align:center;color:black">請選擇付款方式</h1>
+
+<form style="position:fixed; top:190; left:630;">
+<br><input type="radio"  name="PAY" value="pay1" id = "111" checked = "checked"> 超商繳費
+<br><input type="radio"  name="PAY" value="pay2" id = "112"> 信用卡預付
+<br>
+</form>
+
+<center><input type ="button" onclick="pays()" value="確定" style="position:fixed; top:280; left:655;"></input></center>
+<script>
+var test = decodeURI(window.location.href);
+var str="";
+var str1 = new Array();
+str1[0]=[""];
+str1[1]=[""];
+str1[2]=[""];
+str1[3]=[""];
+str1[4]=[""];
+str1[5]=[""];
+var e=0;
+var c=1000;
+var str2="";
+for(var x in test){
+      if (test[x] == "=")
+   {
+     c=x;
+   }
+   if(x>c)
+   {
+     str+=test[x];
+   }
+}
+for(var x in str){
+      if(str[x] == "/"){
+     e+=1;
+   }
+   else{
+     str1[e]+=str[x];
+   }
+}
+str2+="<table border='1' align='center' id='Table'>";
+str2+="<tr><td>車種</td><td>車次</td><td>起站->到站</td><td>出發時間</td><td>到達時間</td><td>票價</td></tr>";
+str2+="<tr><td>" + str1[0] +  "</td><td>" + str1[1] + "</td><td>" + str1[2] + "</td><td>" + str1[3] + "</td><td>" + str1[4] + "</td><td>" + str1[5] + "</td></tr>";
+document.getElementById("d").innerHTML = str2;
+</script>
+
+
+
+
+
+
+
+
+
+
+<p id="credit" data-toggle = "tooltip" dataplacement = "top" title = "請輸入4碼信用卡卡號"></p>
+
+
+</BODY>
+</HTML>
